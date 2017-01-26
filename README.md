@@ -13,7 +13,7 @@ Simple Element to make Gmail like text avatars for profile pictures. These avata
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="k-avatar.html">
-    <k-avatar data-name="Dy"></k-avatar> <span>Dy</span>
+    <k-avatar data-name="Kang cahya"></k-avatar> <span>Kang cahya</span>
   </template>
 </custom-element-demo>
 ```
