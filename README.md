@@ -46,7 +46,7 @@ data-font-weight | Font weight of the character(s). | 400
 data-border-radius | Set border-radius container character. | 0 (%)
 
 ## Change log
-You can find a list of all changes for each release in the [change log](https://github.com/k4ng/k-avatar/blob/master/CHANGELOG.md)
+You can find a list of all changes for each release in the [change log](https://github.com/k4ng/k-avatar/blob/master/CHANGELOG.md).
 
 ## Contributing
 - Fork it!
