@@ -5,8 +5,6 @@
 
 # \<k-avatar\>
 
-Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.
-
 <!--
 ```
 <custom-element-demo>
@@ -18,6 +16,9 @@ Simple Element to make Gmail like text avatars for profile pictures. These avata
 </custom-element-demo>
 ```
 -->
+
+Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.
+
 
 ## How to install
 ```markdown
