@@ -46,16 +46,16 @@ bower install --save k-avatar
 
 ## Properties
 
-Property | Data Attribute | Description | Default Value
--------- | -------------- | ----------- | -------------
-Name | data-name | Name of the user which the profile picture should be generated. | K4ng
-Height | data-height | Height of the picture. | 48 (pixel)
-Width | data-width | Width of the picture. | 48 (pixel)
-Char Alias | data-char-alias | Number of characherts to be shown in the picture. | 1
-Text Color | data-text-color | Color of the text. | #FFFFFF (white)
-Font Size | data-font-size | Font size of the character(s). | 20 (pixel)
-Font Weight | data-font-weight | Font weight of the character(s). | 400 
-Border Radius | data-border-radius | Set border-radius container character. | 0 (%)
+Data Attribute | Description | Default Value
+-------------- | ----------- | -------------
+data-name | Name of the user which the profile picture should be generated. | K4ng
+data-height | Height of the picture. | 48 (pixel)
+data-width | Width of the picture. | 48 (pixel)
+data-char-alias | Number of characherts to be shown in the picture. | 1
+data-text-color | Color of the text. | #FFFFFF (white)
+data-font-size | Font size of the character(s). | 20 (pixel)
+data-font-weight | Font weight of the character(s). | 400 
+data-border-radius | Set border-radius container character. | 0 (%)
 
 ## Contributing
 - Fork it!
