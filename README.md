@@ -35,13 +35,13 @@ bower install --save k-avatar
 
 ```html
 <k-avatar 
-    data-name           = "Dy"
+    data-name           = "Kang cahya"
     data-height         = "100"
     data-width          = "100"
-    data-char-count     = "1"
+    data-char-alias     = "2"
     data-text-color     = "#FFFFFF"
-    data-font-size      = "60"
-    data-font-weight    = "300"></k-avatar> <span>Dy</span>
+    data-font-size      = "40"
+    data-font-weight    = "500"></k-avatar> <span>Dy</span>
 ```
 
 ## Properties
@@ -51,10 +51,11 @@ Property | Data Attribute | Description | Default Value
 Name | data-name | Name of the user which the profile picture should be generated. | K4ng
 Height | data-height | Height of the picture. | 48 (pixel)
 Width | data-width | Width of the picture. | 48 (pixel)
-Char Count | data-char-count | Number of characherts to be shown in the picture. | 1
+Char Alias | data-char-alias | Number of characherts to be shown in the picture. | 1
 Text Color | data-text-color | Color of the text. | #FFFFFF (white)
-Font Size | data-font-size | Font size of the character(s). | 30 (pixel)
+Font Size | data-font-size | Font size of the character(s). | 20 (pixel)
 Font Weight | data-font-weight | Font weight of the character(s). | 400 
+Border Radius | data-border-radius | Set border-radius container character. | 0 (%)
 
 ## Contributing
 - Fork it!
