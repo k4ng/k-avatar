@@ -1,0 +1,152 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
+
+<!--
+@demo demo/index.html Basic demo
+-->
+
+<dom-module id="k-avatar">
+    <template>
+        <style>
+            :host {
+                display: inline-block;
+            }
+
+            #container{ 
+                position: relative;
+            }
+            #character{
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+
+        <div id="container">
+            <span id="character">{{__makeAvatar(dataName)}}</span>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'k-avatar',
+            properties: 
+            {
+                dataName: {
+                    type: String,
+                    value: 'Kang'  
+                },
+                dataHeight: {
+                    type: Number,
+                    value: '',
+                    observer: '__obsHeight'
+                },
+                dataWidth: {
+                    type: Number,
+                    value: '',
+                    observer: '__obsWidth'
+                },
+                dataCharAlias: {
+                    type: Number,
+                    value: '',
+                    observer: '__obsCharAlias'
+                },
+                dataTextColor: {
+                    type: String,
+                    value: '',
+                    observer: '__obsTextColor'
+                },
+                dataFontSize: {
+                    type: Number,
+                    value: '',
+                    observer: '__obsFontSize'
+                },
+                dataFontWeight: {
+                    type: Number,
+                    value: '',
+                    observer: '__obsFontWeight'
+                },
+                dataBorderRadius: {
+                    type: Number,
+                    value: '',
+                    observer: '__obsBorderRadius'
+                }
+            },
+            __obsHeight: function(){
+                if(this.dataHeight == '' || this.dataHeight == null){
+                    this.dataHeight = 48;
+                }
+                this.$.container.style.height = this.dataHeight + 'px';
+            },
+            __obsWidth: function(){
+                if(this.dataWidth == '' || this.dataWidth == null){
+                    this.dataWidth = 48;
+                }
+                this.$.container.style.width = this.dataWidth + 'px';
+            },
+            __obsCharAlias: function(){
+                if(this.dataCharAlias == '' || this.dataCharAlias == null){
+                    this.dataCharAlias = 1;
+                }
+            },
+            __obsTextColor: function(){
+                if(this.dataTextColor == '' || this.dataTextColor == null){
+                    this.dataTextColor = '#FFFFFF';
+                }
+                this.$.character.style.color = this.dataTextColor;
+            },
+            __obsFontSize: function(){
+                if(this.dataFontSize == '' || this.dataFontSize == null){
+                    this.dataFontSize = 20;
+                }
+                this.$.character.style.fontSize = this.dataFontSize + 'px';
+            },
+            __obsFontWeight: function(){
+                if(this.dataFontWeight == '' || this.dataFontWeight == null){
+                    this.dataFontWeight = 400;
+                }
+                this.$.character.style.fontWeight = this.dataFontWeight;
+            },
+            __obsBorderRadius: function(){
+                if(this.dataBorderRadius == '' || this.dataBorderRadius == null){
+                    this.dataBorderRadius = 0;
+                }
+                this.$.container.style.borderRadius = this.dataBorderRadius + '%';
+            },
+
+            __makeAvatar:function(xname)
+            {
+                var colors = ["#1abc9c", "#16a085", "#f1c40f", "#f39c12", "#2196F3", "#3F51B5", "#673AB7", "#E91E63", "#9C27B0", "#009688", "#4CAF50", "#FF9800", "#795548", "#FF5722", "#2ecc71", "#27ae60", "#e67e22", "#d35400", "#3498db", "#2980b9", "#e74c3c", "#c0392b", "#9b59b6", "#8e44ad", "#bdc3c7", "#34495e", "#2c3e50", "#95a5a6", "#7f8c8d", "#ec87bf", "#d870ad", "#f69785", "#9ba37e", "#b49255", "#b49255", "#a94136"],
+                    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0"],
+                    tempName = '',
+                    splitName = xname.split(" "),
+                    alphabetPosition = alphabet.indexOf(xname.charAt(0).toLowerCase());
+
+                this.$.container.style.backgroundColor = colors[alphabetPosition];
+                
+                if(splitName.length == 1)
+                {
+                    return xname.charAt(0);
+                }
+                else
+                {
+                    if(this.dataCharAlias == splitName.length)
+                    {
+                        for(var i=0; i < this.dataCharAlias; i++)
+                        {
+                            tempName += splitName[i].charAt(0);
+                        }
+                        return tempName;
+                    }
+                    else
+                    {
+                        return xname.charAt(0);
+                    }
+                }
+            }
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,46 @@
+{
+  "name": "initial-avatar",
+  "version": "1.0.0",
+  "description": "Simple jQuery plugin to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size as they are SVG based.",
+  "authors": [
+    "Kang Cahya <dyazincahya@gmail.com> (https://github.com/dyazincahya)"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "gravatar",
+    "placeholder",
+    "avatar",
+    "initials"
+  ],
+  "main": "initial-avatar.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dyazincahya/initial-avatar.git"
+  },
+  "license": "https://github.com/dyazincahya/initial-avatar/blob/master/LICENSE",
+  "homepage": "https://dyazincahya.github.io/initial-avatar/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "ef43f41d15c59548c3beb34db54ee7b84b420cb1"
+  },
+  "_source": "https://github.com/dyazincahya/initial-avatar.git",
+  "_target": "^1.0.0",
+  "_originalSource": "dyazincahya/initial-avatar",
+  "_direct": true
+}

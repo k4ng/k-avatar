@@ -41,7 +41,7 @@ bower install --save k-avatar
     data-char-alias     = "2"
     data-text-color     = "#FFFFFF"
     data-font-size      = "40"
-    data-font-weight    = "500"></k-avatar> <span>Dy</span>
+    data-font-weight    = "500"></k-avatar> <span>Kang cahya</span>
 ```
 
 ## Properties
