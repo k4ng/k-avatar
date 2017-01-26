@@ -28,7 +28,7 @@ bower install --save k-avatar
 
 #### Simple
 ```html
-<k-avatar data-name="Dy"></k-avatar> <span>Dy</span>
+<k-avatar data-name="Kang cahya"></k-avatar> <span>Kang cahya</span>
 ```
 
 #### Advance
