@@ -3,6 +3,8 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dyazincahya/k-avatar/blob/master/LICENSE) 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://github.com/dyazincahya/k-avatar) 
 
+# \<k-avatar\>
+
 <!--
 ```
 <custom-element-demo>
@@ -14,8 +16,6 @@
 </custom-element-demo>
 ```
 -->
-
-# \<k-avatar\>
 
 Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.
 
