@@ -74,6 +74,9 @@
                     type: Number,
                     value: '',
                     observer: '__obsBorderRadius'
+                },
+                output: {
+                    type: String
                 }
             },
             __obsHeight: function(){
@@ -92,8 +95,8 @@
                 if(this.dataCharAlias == '' || this.dataCharAlias == null){
                     this.dataCharAlias = 1;
                 }
-                var output = this.__makeAvatar(this.dataName);
-                this.output = output;
+                this.output = this.__makeAvatar(this.dataName);
+                // this.output = output;
             },
             __obsTextColor: function(){
                 if(this.dataTextColor == '' || this.dataTextColor == null){
@@ -121,8 +124,7 @@
             },
 
             __obsName: function(xname) {
-                var output = this.__makeAvatar(xname);
-                this.output = output;
+                this.output = this.__makeAvatar(this.dataName);
             },
             
             __makeAvatar:function(xname)
