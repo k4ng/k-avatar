@@ -26,7 +26,7 @@
         </style>
 
         <div id="container">
-            <span id="character">{{ output }}</span>
+            <span id="character">{{ _output }}</span>
         </div>
     </template>
 
@@ -75,7 +75,7 @@
                     value: '',
                     observer: '__obsBorderRadius'
                 },
-                output: {
+                _output: {
                     type: String
                 }
             },
@@ -95,7 +95,7 @@
                 if(this.dataCharAlias == '' || this.dataCharAlias == null){
                     this.dataCharAlias = 1;
                 }
-                this.output = this.__makeAvatar(this.dataName);
+                this._output = this.__makeAvatar(this.dataName);
                 // this.output = output;
             },
             __obsTextColor: function(){
@@ -124,7 +124,7 @@
             },
 
             __obsName: function(xname) {
-                this.output = this.__makeAvatar(this.dataName);
+                this._output = this.__makeAvatar(this.dataName);
             },
             
             __makeAvatar:function(xname)
