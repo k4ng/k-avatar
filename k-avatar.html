@@ -1,5 +1,4 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-image/iron-image.html">
 
 <!--
 @demo demo/index.html Basic demo
@@ -26,7 +25,7 @@
         </style>
 
         <div id="container">
-            <span id="character">{{ output }}</span>
+            <span id="character">{{__makeAvatar(dataName)}}</span>
         </div>
     </template>
 
@@ -37,8 +36,7 @@
             {
                 dataName: {
                     type: String,
-                    value: 'Kang',
-                    observer: '__obsName'
+                    value: 'Kang'  
                 },
                 dataHeight: {
                     type: Number,
@@ -92,8 +90,6 @@
                 if(this.dataCharAlias == '' || this.dataCharAlias == null){
                     this.dataCharAlias = 1;
                 }
-                var output = this.__makeAvatar(this.dataName);
-                this.output = output;
             },
             __obsTextColor: function(){
                 if(this.dataTextColor == '' || this.dataTextColor == null){
@@ -120,11 +116,6 @@
                 this.$.container.style.borderRadius = this.dataBorderRadius + '%';
             },
 
-            __obsName: function(xname) {
-                var output = this.__makeAvatar(xname);
-                this.output = output;
-            },
-            
             __makeAvatar:function(xname)
             {
                 var colors = ["#1abc9c", "#16a085", "#f1c40f", "#f39c12", "#2196F3", "#3F51B5", "#673AB7", "#E91E63", "#9C27B0", "#009688", "#4CAF50", "#FF9800", "#795548", "#FF5722", "#2ecc71", "#27ae60", "#e67e22", "#d35400", "#3498db", "#2980b9", "#e74c3c", "#c0392b", "#9b59b6", "#8e44ad", "#bdc3c7", "#34495e", "#2c3e50", "#95a5a6", "#7f8c8d", "#ec87bf", "#d870ad", "#f69785", "#9ba37e", "#b49255", "#b49255", "#a94136"],
@@ -143,9 +134,7 @@
                 {
                     if(this.dataCharAlias == splitName.length)
                     {
-                        var l = +this.dataCharAlias;
-                        
-                        for(var i=0; i < l; i++)
+                        for(var i=0; i < this.dataCharAlias; i++)
                         {
                             tempName += splitName[i].charAt(0);
                         }
@@ -156,7 +145,6 @@
                         return xname.charAt(0);
                     }
                 }
-                
             }
         });
     </script>
