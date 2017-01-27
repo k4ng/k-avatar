@@ -2,7 +2,7 @@
 <link rel="import" href="../iron-image/iron-image.html">
 
 <!--
-@demo demo/index.html demo
+@demo demo/index.html Basic demo
 -->
 
 <dom-module id="k-avatar">
@@ -37,42 +37,42 @@
             {
                 dataName: {
                     type: String,
-                    value: 'Kang',
+                    value: 'K4ng',
                     observer: '__obsName'
                 },
                 dataHeight: {
                     type: Number,
-                    value: '',
+                    value: '48',
                     observer: '__obsHeight'
                 },
                 dataWidth: {
                     type: Number,
-                    value: '',
+                    value: '48',
                     observer: '__obsWidth'
                 },
                 dataCharAlias: {
                     type: Number,
-                    value: '',
+                    value: '1',
                     observer: '__obsCharAlias'
                 },
                 dataTextColor: {
                     type: String,
-                    value: '',
+                    value: '#FFFFFF',
                     observer: '__obsTextColor'
                 },
                 dataFontSize: {
                     type: Number,
-                    value: '',
+                    value: '20',
                     observer: '__obsFontSize'
                 },
                 dataFontWeight: {
                     type: Number,
-                    value: '',
+                    value: '400',
                     observer: '__obsFontWeight'
                 },
                 dataBorderRadius: {
                     type: Number,
-                    value: '',
+                    value: '0',
                     observer: '__obsBorderRadius'
                 },
                 _output: {
@@ -96,7 +96,7 @@
                     this.dataCharAlias = 1;
                 }
                 this._output = this.__makeAvatar(this.dataName);
-                // this.output = output;
+                // this._output = _output;
             },
             __obsTextColor: function(){
                 if(this.dataTextColor == '' || this.dataTextColor == null){
