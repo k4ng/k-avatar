@@ -1,0 +1,162 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="./digital-alarm-icon.html">
+
+<!--
+`digital-clock`
+a simple clock component
+
+### Styling
+
+Custom property | Description | Default
+----------------|-------------|----------
+'--digital-clock-alarm-icon' | mixin to define the size of the alarm icon | by default the size is 1vw
+'--digital-clock-date-size'  | font-size of the date | by default 50% of the component's font-size
+
+@demo demo/index.html
+@hero digital-clock.png
+-->
+
+<dom-module id="digital-clock">
+  <template>
+    <style>
+      :host {
+        display: flex;
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(15px + 1vw);
+      }
+      .time {
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      .date {
+        font-size: var(--digital-clock-date-size, 50%);;
+        text-align: center;
+      }
+      .alarm {
+        font-size:50%;
+      }
+      .alarm iron-icon {
+        height: 1vw;
+        width: 1vw;
+        apply(--digital-clock-alarm-icon)
+      }
+    </style>
+    <div class="time">[[time]]</div>
+    <div class="date">[[date]]</div>
+    <div class="alarm" hidden=[[!_alarmDate]] >
+      <iron-icon icon="digitalClockIcons:alarm"></iron-icon>
+      <span>[[_alarmDate]]</span>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'digital-clock',
+
+      properties: {
+        /**
+         * the locale used to format the date and time
+         * by default, it will use the navigator language
+         * @type {Object}
+         */
+        locale: {
+          type: String,
+          value: function() {
+            return navigator.languages?navigator.languages[0]:navigator.language;
+          },
+        },
+
+        /**
+         * indicate if seconds are displayed
+         * @type {Boolean}
+         */
+        seconds: {
+          type: Boolean,
+          value: false,
+        },
+
+        /**
+         * alarm datetime
+         *
+         * The alarm datetime must be given in ISO 8601,
+         * in Zulu timezone ( GMT ).
+         * @type {Object}
+         */
+        alarm: {
+          type: String,
+          value: null,
+          observer:'_alarmChanged',
+        },
+
+        /**
+         * the time display format (cf Intl.DateTimeFormat )
+         * @type {Object}
+         */
+        _timeOpts: {
+          type: Object,
+          value: function() {
+            return { hour: '2-digit', minute: '2-digit' };
+          },
+          readOnly: true,
+        },
+
+        /**
+         * the date display format (cf Intl.DateTimeFormat )
+         * @type {Object}
+         */
+        _dateOpts: {
+          type: Object,
+          value: function() {
+            return { weekday:'short', day: '2-digit', month: 'short', year: 'numeric' }
+          },
+          readOnly: true,
+        },
+      },
+
+      observers: [
+        '_secondsChanged(seconds, _timeOpts)'
+      ],
+
+      ready() {
+        this._calcDateTime();
+        setInterval(this._calcDateTime.bind(this), 1000);
+      },
+
+      _secondsChanged(newValue) {
+          if(newValue) {
+            this._timeOpts.second = '2-digit';
+          } else if(this._timeOpts.second) {
+            delete this._timeOpts.second;
+          }
+      },
+
+      _alarmChanged() {
+        const _alarmOpts = { weekday:'short', day: '2-digit', hour: '2-digit', minute: '2-digit' }
+        if (this.alarm && Math.trunc(new Date().valueOf() / 1000) < Math.trunc(new Date(this.alarm).valueOf() / 1000)) {
+          this._alarmDate = new Intl.DateTimeFormat(this.locale, _alarmOpts).format(new Date(this.alarm));
+        } else {
+          this._alarmDate = '';
+        }
+      },
+
+      _calcDateTime() {
+        const date = new Date();
+        this.time = new Intl.DateTimeFormat(this.locale, this._timeOpts).format(date);
+		    this.date = new Intl.DateTimeFormat(this.locale, this._dateOpts).format(date);
+        if(this.alarm && Math.trunc(date.valueOf() / 1000) == Math.trunc(new Date(this.alarm).valueOf() / 1000))  {
+          /**
+           * The event is fired when the alarm time is reached
+           * @event clock-alarm
+           * @param {String} date the datetime of the alarm as given
+           */
+          this.fire('clock-alarm', { date: this.alarm});
+          this._alarmDate = '';
+        }
+      },
+    });
+  </script>
+</dom-module>

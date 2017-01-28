@@ -1,0 +1,33 @@
+{
+  "name": "digital-clock",
+  "version":"1.0.1",
+  "description": "A simple clock component",
+  "license": "LICENSE.md",
+  "main": "digital-clock.html",
+  "authors": [
+    "Telecom Sante <dev@telecomsante.com>"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "clock",
+    "date",
+    "time",
+    "alarm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/telecomsante/digital-clock.git"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.12"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "ignore": []
+}

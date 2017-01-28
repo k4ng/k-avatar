@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>tsante-clock demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../digital-clock.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      #clock1 {
+        font-size:35px;
+        width: 250px;
+        background: gainsboro;
+        margin:auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic tsante-clock demo</h3>
+      <demo-snippet>
+        <template>
+          <digital-clock id='clock1' locale="en-US"></digital-clock>
+        </template>
+      </demo-snippet>
+      <demo-snippet>
+        <template>
+          <digital-clock locale="fr-FR" seconds></digital-clock>
+        </template>
+      </demo-snippet>
+      <demo-snippet>
+        <template is="dom-bind" id="clock3">
+          <digital-clock id='clock' locale="fr-FR" alarm='2017-01-25T17:30:00'></digital-clock>
+          <audio src="./Zen_Temple_Bell.mp3" id="alarm"></audio>
+          <script>
+            const clock3 = document.querySelector('#clock3');
+            let now = new Date()
+            now.setMinutes(now.getMinutes() + 1);
+            now.setSeconds(0);
+            clock3.$.clock.alarm = now.toISOString();
+            clock3.$.clock.addEventListener('clock-alarm', () => {
+              clock3.$.alarm.play();
+            },true);
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
