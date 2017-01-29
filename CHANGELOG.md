@@ -1,7 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [0.1.1] - 2017-01-27
+## [0.1.1] - 2017-01-29
+### Add
+- create "github pages" for demo and api docs page
+
 ### Change
 - Fix bug data-char-alias from @mas_roso
 
