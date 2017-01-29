@@ -17,7 +17,7 @@
 ```
 -->
 
-Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size. [view demo](https://k4ng.github.io/k-avatar/)
+Simple component to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size. [view demo](https://k4ng.github.io/k-avatar/)
 
 ## How to install
 ```markdown
