@@ -1,0 +1,37 @@
+{
+    "name": "k-avatar",
+    "description": "Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.",
+    "main": "k-avatar.html",
+    "version": "0.1.0",
+    "authors": [
+        "Kang Cahya"
+    ],
+    "keywords": [
+        "avatar",
+        "gravatar",
+        "initials",
+        "placeholder",
+        "polymer",
+        "web-components"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/k4ng/k-avatar.git"
+    },
+    "homepage": "https://github.com/k4ng/k-avatar",
+    "license": "MIT License",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^1.1.0"
+    },
+    "devDependencies": {
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+        "web-component-tester": "^4.0.0"
+    }
+}

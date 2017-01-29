@@ -2,7 +2,7 @@
     "name": "k-avatar",
     "description": "Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.",
     "main": "k-avatar.html",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "authors": [
         "Kang Cahya"
     ],
@@ -23,9 +23,7 @@
     "ignore": [
         "**/.*",
         "node_modules",
-        "bower_components",
-        "test",
-        "tests"
+        "bower_components"
     ],
     "dependencies": {
         "polymer": "Polymer/polymer#^1.1.0"
