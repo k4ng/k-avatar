@@ -19,6 +19,9 @@
 
 Simple Element to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size.
 
+## Demo and API Docs
+For demo you can see here [view demo and api docs](https://k4ng.github.io/k-avatar/)
+
 ## How to install
 ```markdown
 bower install --save k-avatar
