@@ -36,6 +36,10 @@ Simple component to make Gmail like text avatars for profile pictures. These ava
 bower install --save k-avatar
 ```
 
+```markdown
+npm install k-avatar
+```
+
 
 ## Properties
 
