@@ -1,38 +1,23 @@
 [![bower version](https://img.shields.io/bower/v/k-avatar.svg)](https://libraries.io/bower/k-avatar) 
 [![open issues](https://img.shields.io/github/issues/k4ng%2Fk-avatar.svg)](https://github.com/k4ng/k-avatar/issues) 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dyazincahya/k-avatar/blob/master/LICENSE) 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://github.com/dyazincahya/k-avatar) 
+
 
 # \<k-avatar\>
 
+Simple component to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size. [view demo](https://k4ng.github.io/k-avatar/)
+
 <!--
 ```
-<custom-element-demo>
+<custom-element-demo height="300">
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="k-avatar.html">
-    <k-avatar data-name="Kang cahya"></k-avatar> <span>Kang cahya</span>
+    <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
 -->
-
-Simple component to make Gmail like text avatars for profile pictures. These avatars can be scaled up to any size. [view demo](https://k4ng.github.io/k-avatar/)
-
-## How to install
-```markdown
-bower install --save k-avatar
-```
-
-## Usage
-
-#### Simple
-```html
-<k-avatar data-name="Kang cahya"></k-avatar> <span>Kang cahya</span>
-```
-
-#### Advance
-
 ```html
 <k-avatar 
     data-name           = "Kang cahya"
@@ -43,6 +28,14 @@ bower install --save k-avatar
     data-font-size      = "40"
     data-font-weight    = "500"></k-avatar> <span>Kang cahya</span>
 ```
+
+
+## How to install
+
+```markdown
+bower install --save k-avatar
+```
+
 
 ## Properties
 
@@ -58,11 +51,17 @@ data-font-weight | Font weight of the character(s). | 400
 data-border-radius | Set border-radius container character. | 0 (%)
 
 ## Change log
+
 You can find a list of all changes for each release in the [change log](https://github.com/k4ng/k-avatar/blob/master/CHANGELOG.md).
 
 ## Contributing
-- Fork it!
-- Create your feature branch: git checkout -b my-new-feature
-- Commit your changes: git commit -m 'Add some feature'
-- Push to the branch: git push origin my-new-feature
-- Submit a pull request :D
+
+1. Fork it!
+1. Create your feature branch: git checkout -b my-new-feature
+1. Commit your changes: git commit -m 'Add some feature'
+1. Push to the branch: git push origin my-new-feature
+1. Submit a pull request :D
+
+## License
+
+[MIT License](https://github.com/dyazincahya/k-avatar/blob/master/LICENSE) 
