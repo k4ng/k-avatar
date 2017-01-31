@@ -75,45 +75,37 @@
                     value: 0,
                     observer: '__obsBorderRadius'
                 },
+                dataBoxShadow: {
+                    type: String,
+                    value: '0px 0px 0px 0px rgba(33,33,33,0.75)',
+                    observer: '__obsBoxShadow'
+                },
+                dataTextShadow: {
+                    type: String,
+                    value: '0px 0px 0px rgba(33,33,33,0.75)',
+                    observer: '__obsTextShadow'
+                },
+
                 _output: {
                     type: String
                 }
             },
             __obsHeight: function(){
-                if(this.dataHeight == '' || this.dataHeight == null){
-                    this.dataHeight = 48;
-                }
                 this.$.container.style.height = this.dataHeight + 'px';
             },
             __obsWidth: function(){
-                if(this.dataWidth == '' || this.dataWidth == null){
-                    this.dataWidth = 48;
-                }
                 this.$.container.style.width = this.dataWidth + 'px';
             },
             __obsCharAlias: function(){
-                if(this.dataCharAlias == '' || this.dataCharAlias == null){
-                    this.dataCharAlias = 1;
-                }
                 this._output = this.__makeAvatar(this.dataName);
-                // this._output = _output;
             },
             __obsTextColor: function(){
-                if(this.dataTextColor == '' || this.dataTextColor == null){
-                    this.dataTextColor = '#FFFFFF';
-                }
                 this.$.character.style.color = this.dataTextColor;
             },
             __obsFontSize: function(){
-                if(this.dataFontSize == '' || this.dataFontSize == null){
-                    this.dataFontSize = 20;
-                }
                 this.$.character.style.fontSize = this.dataFontSize + 'px';
             },
             __obsFontWeight: function(){
-                if(this.dataFontWeight == '' || this.dataFontWeight == null){
-                    this.dataFontWeight = 400;
-                }
                 this.$.character.style.fontWeight = this.dataFontWeight;
             },
             __obsBorderRadius: function(){
@@ -121,6 +113,16 @@
                     this.dataBorderRadius = 0;
                 }
                 this.$.container.style.borderRadius = this.dataBorderRadius + '%';
+            },
+            __obsBoxShadow: function(){
+                this.$.container.style.webkitBoxShadow = this.dataBoxShadow;
+                this.$.container.style.mozBoxShadow = this.dataBoxShadow;
+                this.$.container.style.boxShadow = this.dataBoxShadow;
+            },
+            __obsTextShadow: function(){
+                this.$.character.style.webkitTextShadow = this.dataTextShadow;
+                this.$.character.style.mozTextShadow = this.dataTextShadow;
+                this.$.character.style.textShadow = this.dataTextShadow;
             },
 
             __obsName: function(xname) {

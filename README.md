@@ -25,8 +25,10 @@ Simple component to make Gmail like text avatars for profile pictures. These ava
     data-width          = "100"
     data-char-alias     = "2"
     data-text-color     = "#FFFFFF"
+    data-border-radius  = "10"
     data-font-size      = "40"
-    data-font-weight    = "500"></k-avatar> <span>Kang cahya</span>
+    data-font-weight    = "500"></k-avatar> 
+    <p><strong>Kang cahya</strong></p>
 ```
 
 
@@ -56,7 +58,9 @@ data-char-alias | Number of characherts to be shown in the picture. | 1
 data-text-color | Color of the text. | #FFFFFF (white)
 data-font-size | Font size of the character(s). | 20 (pixel)
 data-font-weight | Font weight of the character(s). | 400 
-data-border-radius | Set border-radius container character. | 0 (%)
+data-border-radius | Set border-radius container. | 0 (%)
+data-box-shadow | set box-shadow container. | 0px 0px 0px 0px rgba(33,33,33,0.75)
+data-text-shadow | set tex-shadow character. | 0px 0px 0px rgba(33,33,33,0.75)
 
 ## Change log
 
