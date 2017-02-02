@@ -1,6 +1,6 @@
 [![bower version](https://img.shields.io/bower/v/k-avatar.svg)](https://libraries.io/bower/k-avatar) 
 [![open issues](https://img.shields.io/github/issues/k4ng%2Fk-avatar.svg)](https://github.com/k4ng/k-avatar/issues) 
-[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/k-avatar)
+[![npm](https://img.shields.io/npm/v/k-avatar.svg)](https://www.npmjs.com/package/k-avatar)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://github.com/k4ng/k-avatar) 
 
 
