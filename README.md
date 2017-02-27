@@ -63,6 +63,12 @@ data-border-radius | Set border-radius container. | 0 (%)
 data-box-shadow | set box-shadow container. | 0px 0px 0px 0px rgba(33,33,33,0.75)
 data-text-shadow | set text-shadow character. | 0px 0px 0px rgba(33,33,33,0.75)
 
+
+## Change log
+
+You can find a list of all changes for each release in the [change log](https://github.com/k4ng/k-avatar/blob/master/CHANGELOG.md).
+
+
 ## Contributing
 
 1. Fork it!
