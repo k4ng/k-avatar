@@ -16,7 +16,7 @@ All notable changes to this project will be documented in this file.
 - create "github pages" for demo and api docs page
 
 ### Change
-- Fix bug data-char-alias from @mas_roso
+- Fix bug data-char-alias from [@mas_roso](https://github.com/londomloto)
 
 ## [1.1.0] - 2017-01-26
 ### Add
